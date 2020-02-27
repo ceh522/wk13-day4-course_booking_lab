@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface CustomerRepositoryCustom {
     List<Customer> findCustomerOnCourseId (Long courseId);
+    List<Customer> findCustomerOnTownAndCourseId (String town, Long courseId);
 }

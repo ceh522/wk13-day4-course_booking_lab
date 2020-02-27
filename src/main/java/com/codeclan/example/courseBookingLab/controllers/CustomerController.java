@@ -18,4 +18,9 @@ public class CustomerController {
     public List<Customer> findCustomerOnCourseId(@RequestParam Long id){
         return customerRepository.findCustomerOnCourseId(id);
     }
+
+    @GetMapping(value="/search/findCustomerOnTownAndCourseId")
+    public List<Customer> findCustomerOnTownAndCourseId (@RequestParam String town, Long courseId){
+        return customerRepository.findCustomerOnTownAndCourseId(town, courseId);
+    }
 }
