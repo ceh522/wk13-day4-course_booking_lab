@@ -1,7 +1,7 @@
 package com.codeclan.example.courseBookingLab.controllers;
 
 import com.codeclan.example.courseBookingLab.Models.Customer;
-import com.codeclan.example.courseBookingLab.repositories.CustomerRepository;
+import com.codeclan.example.courseBookingLab.repositories.CustomerRepository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

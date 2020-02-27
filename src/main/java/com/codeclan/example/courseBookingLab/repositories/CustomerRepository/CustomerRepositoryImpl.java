@@ -1,4 +1,4 @@
-package com.codeclan.example.courseBookingLab.repositories;
+package com.codeclan.example.courseBookingLab.repositories.CustomerRepository;
 
 import com.codeclan.example.courseBookingLab.Models.Customer;
 import org.hibernate.Criteria;
@@ -30,10 +30,10 @@ public class CustomerRepositoryImpl implements CustomerRepositoryCustom {
             result = cr.list();
         } catch (HibernateException ex){
             ex.printStackTrace();
+
+        } finally {
+            session.close();
         }
-//        } finally {
-//            session.close();
-//        }
 
         return result;
     }
