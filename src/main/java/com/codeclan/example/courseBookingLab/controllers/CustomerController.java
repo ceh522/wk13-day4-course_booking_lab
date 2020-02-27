@@ -23,4 +23,9 @@ public class CustomerController {
     public List<Customer> findCustomerOnTownAndCourseId (@RequestParam String town, Long courseId){
         return customerRepository.findCustomerOnTownAndCourseId(town, courseId);
     }
+
+    @GetMapping(value = "/search/findCustomerOverAgeInTownUsingCourseId")
+    public List<Customer> findCustomerOverAgeInTownUsingCourseId (@RequestParam int age, String town, Long courseId){
+      return customerRepository.findCustomerOverAgeInTownUsingCourseId(age, town, courseId);
+    }
 }
